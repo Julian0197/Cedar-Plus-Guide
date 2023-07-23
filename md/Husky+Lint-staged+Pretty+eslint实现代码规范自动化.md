@@ -1,4 +1,4 @@
-## 代码规范自动化
+## Husky+Lint-staged+Pretty+eslint实现代码规范自动化
 
 想要利用 Git Hooks 在提交代码之前进行代码检查和格式化。
 
