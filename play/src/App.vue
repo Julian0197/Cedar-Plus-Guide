@@ -1,10 +1,12 @@
 <template>
   <div>
-    <c-icon>Icon</c-icon>
+    <el-icon :size="20" :color="'green'">Icon</el-icon>
   </div>
 </template>
-<script setup lang="ts">
-import CIcon from '@msk/components/icon'
-import '@msk/theme-chalk/src/index.scss'
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
+  name: 'App',
+})
 </script>
 <style scoped></style>
