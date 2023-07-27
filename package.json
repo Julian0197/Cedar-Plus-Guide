@@ -1,7 +1,10 @@
 {
-  "private": true,
   "version": "1.0.0",
+  "private": true,
   "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,9 +15,6 @@
     "typecheck": "run-p typecheck:web typecheck:play typecheck:node typecheck:vitest",
     "prepare": "husky install"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@msk/components": "workspace:^1.0.0",
     "@msk/eslint-config": "workspace:^0.0.1",

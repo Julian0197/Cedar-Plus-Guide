@@ -4,9 +4,11 @@ export type SFCWithInstall<T> = T & Plugin
 export const withInstall = <T>(comp: T) => {
   ;(comp as SFCWithInstall<T>).install = function (app) {
     // 组件的注册名称参数暂时是写死了 ElIcon，在后面的小节，我们再详细说明如何进行设置动态组件名称
-    app.component('ElIcon', comp as SFCWithInstall<T>)
+    // app.component('ElIcon', comp as SFCWithInstall<T>)
+
+    // 动态设置组件名称
+    const { name } = comp as unknown as { name: string }
+    app.component(name, comp as SFCWithInstall<T>)
   }
   return comp as SFCWithInstall<T>
 }
-
-

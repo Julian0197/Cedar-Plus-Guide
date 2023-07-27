@@ -7,4 +7,3 @@ export const iconProps = {
 
 export type Props = ExtractPropTypes<typeof iconProps>
 export type IconInstance = InstanceType<typeof Icon>
-
