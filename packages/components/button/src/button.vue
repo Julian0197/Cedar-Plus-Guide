@@ -15,6 +15,17 @@
     :type="nativeType"
     @click="handleClick"
   >
+    <template v-if="loading">
+      <slot v-if="$slots.loading" name="loading" />
+      <el-icon v-else :class="ns.is('loading')">
+        <component :is="loadingIcon"
+      /></el-icon>
+    </template>
+    <!-- 优先通过loading属性 -->
+    <el-icon v-else-if="icon || $slots.icon">
+      <component :is="icon" v-if="icon" />
+      <slot v-else name="icon" />
+    </el-icon>
     <slot />
   </button>
 </template>

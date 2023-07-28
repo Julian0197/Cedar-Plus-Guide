@@ -16,6 +16,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
     "@msk/components": "workspace:^1.0.0",
     "@msk/eslint-config": "workspace:^0.0.1",
     "@msk/theme-chalk": "workspace:^1.0.0",

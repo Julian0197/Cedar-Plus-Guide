@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@element-plus/icons-vue': ^2.1.0
       '@msk/components': workspace:^1.0.0
       '@msk/eslint-config': workspace:^0.0.1
       '@msk/hooks': workspace:^1.0.0
@@ -24,6 +25,7 @@ importers:
       vue: ^3.2.37
       vue-tsc: ^0.38.2
     dependencies:
+      '@element-plus/icons-vue': 2.1.0_vue@3.3.4
       '@msk/components': link:packages/components
       '@msk/eslint-config': link:internal/eslint-config
       '@msk/theme-chalk': link:packages/theme-chalk
@@ -153,6 +155,14 @@ packages:
       '@babel/helper-string-parser': 7.22.5
       '@babel/helper-validator-identifier': 7.22.5
       to-fast-properties: 2.0.0
+
+  /@element-plus/icons-vue/2.1.0_vue@3.3.4:
+    resolution: {integrity: sha512-PSBn3elNoanENc1vnCfh+3WA9fimRC7n+fWkf3rE5jvv+aBohNHABC/KAR5KWPecxWxDTVT1ERpRbOMRcOV/vA==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: 3.3.4
+    dev: false
 
   /@esbuild/android-arm/0.15.18:
     resolution: {integrity: sha512-5GT+kcs2WVGjVs7+boataCkO5Fg0y4kCjzkB5bAip7H4jfnOS3dA6KPiww9W1OEKTKeAcUVhdZGvgI65OXmUnw==}

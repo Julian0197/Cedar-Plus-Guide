@@ -1,8 +1,8 @@
 <template>
   <div>
     <el-icon :size="20" :color="'green'"><EditIcon /></el-icon>
-    <el-button @click="handleClick">按钮</el-button>
-    <el-button type="primary">Primary</el-button>
+    <el-button ref="buttonRef" @click="handleClick">按钮测试</el-button>
+    <el-button type="primary" :icon="Edit">props实现图标按钮</el-button>
     <el-button type="success" plain>Success</el-button>
     <el-button type="info" round>Info</el-button>
     <el-button type="warning" circle>Warning</el-button>
@@ -12,7 +12,8 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, nextTick, ref } from 'vue'
+import { Edit } from '@element-plus/icons-vue'
 import EditIcon from './EditIcon.vue'
 
 export default defineComponent({
@@ -23,11 +24,16 @@ export default defineComponent({
 
   setup() {
     const handleClick = (e: Event) => {
-      console.log(e, 'event')
+      console.log(e, 'event111')
     }
-
+    const buttonRef = ref()
+    nextTick(() => {
+      console.log('buttonRef222', buttonRef.value.ref)
+    })
     return {
       handleClick,
+      buttonRef,
+      Edit,
     }
   },
 })
