@@ -3,8 +3,8 @@
     ref="_ref"
     :class="[
       ns.b(),
-      ns.m(type),
-      ns.m(size),
+      ns.m(_type),
+      ns.m(_size),
       ns.is('disabled', disabled),
       ns.is('plain', plain),
       ns.is('round', round),
@@ -30,15 +30,22 @@
   </button>
 </template>
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { computed, inject, ref } from 'vue'
 import { useNamespace } from '@msk/hooks'
+import { buttonGroupContextKey } from '@msk/tokens'
 import { buttonEmits, buttonProps } from './button'
+
 // 定义组件名称
 defineOptions({
   name: 'ElButton',
 })
 // 定义 Props
-defineProps(buttonProps)
+const props = defineProps(buttonProps)
+// 使用 inject 取出祖先组件提供的依赖(inject第二个参数是一个默认值)
+const buttonGroupContext = inject(buttonGroupContextKey, undefined)
+// 使用 computed 进行缓存计算
+const _size = computed(() => props.size || buttonGroupContext?.size)
+const _type = computed(() => props.type || buttonGroupContext?.type || '')
 // 定义 emit
 const emit = defineEmits(buttonEmits)
 // classname 的 BEM 命名

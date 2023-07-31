@@ -20,6 +20,7 @@
     "@msk/components": "workspace:^1.0.0",
     "@msk/eslint-config": "workspace:^0.0.1",
     "@msk/theme-chalk": "workspace:^1.0.0",
+    "@msk/tokens": "workspace:^0.0.1",
     "@msk/utils": "workspace:^1.0.0",
     "@vueuse/core": "^9.5.0"
   },

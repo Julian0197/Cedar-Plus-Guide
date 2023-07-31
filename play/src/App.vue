@@ -9,17 +9,23 @@
     <el-button type="danger" disabled>Danger</el-button>
     <el-button size="large">按钮</el-button>
     <el-button size="small">按钮</el-button>
+    <!-- test button-group -->
+    <div style="margin-top: 20px">
+      <TestButtonGroup />
+    </div>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, nextTick, ref } from 'vue'
 import { Edit } from '@element-plus/icons-vue'
 import EditIcon from './EditIcon.vue'
+import TestButtonGroup from './TestButtonGroup.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
     EditIcon,
+    TestButtonGroup,
   },
 
   setup() {

@@ -5,7 +5,6 @@
     "lib": ["ESNext", "DOM", "DOM.Iterable"] // 指定项目运行时使用的库
   },
   "include": [
-    // 使用 include 来指定应从绝对类型中使用哪些类型
     "packages",
     "typings/components.d.ts",
     "typings/env.d.ts",
@@ -13,7 +12,6 @@
     // playground
     "play/main.ts",
     "play/env.d.ts",
-    "play/src/**/*",
-    "play/vite-env.d.ts"
+    "play/src/**/*" // 双 ** 就是不管多少层 folder 单 * 匹配任意数量的任何字符，包括无
   ]
 }

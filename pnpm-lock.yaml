@@ -9,6 +9,7 @@ importers:
       '@msk/eslint-config': workspace:^0.0.1
       '@msk/hooks': workspace:^1.0.0
       '@msk/theme-chalk': workspace:^1.0.0
+      '@msk/tokens': workspace:^0.0.1
       '@msk/utils': workspace:^1.0.0
       '@types/node': ^20.3.2
       '@vueuse/core': ^9.5.0
@@ -29,6 +30,7 @@ importers:
       '@msk/components': link:packages/components
       '@msk/eslint-config': link:internal/eslint-config
       '@msk/theme-chalk': link:packages/theme-chalk
+      '@msk/tokens': link:packages/tokens
       '@msk/utils': link:packages/utils
       '@vueuse/core': 9.13.0_vue@3.3.4
     devDependencies:
@@ -91,6 +93,9 @@ importers:
     specifiers: {}
 
   packages/theme-chalk:
+    specifiers: {}
+
+  packages/tokens:
     specifiers: {}
 
   packages/utils:
