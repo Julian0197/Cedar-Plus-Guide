@@ -5,7 +5,7 @@ import type { Plugin } from 'vue'
 export type SFCWithInstall<T> = T & Plugin
 export const withInstall = <T, E extends Record<string, any>>(
   main: T,
-  extra: E
+  extra?: E
 ) => {
   ;(main as SFCWithInstall<T>).install = function (app): void {
     // 组件的注册名称参数暂时是写死了 ElIcon，在后面的小节，我们再详细说明如何进行设置动态组件名称

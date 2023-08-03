@@ -6,6 +6,7 @@ importers:
     specifiers:
       '@element-plus/icons-vue': ^2.1.0
       '@msk/components': workspace:^1.0.0
+      '@msk/constants': workspace:*
       '@msk/eslint-config': workspace:^0.0.1
       '@msk/hooks': workspace:^1.0.0
       '@msk/theme-chalk': workspace:^1.0.0
@@ -28,6 +29,7 @@ importers:
     dependencies:
       '@element-plus/icons-vue': 2.1.0_vue@3.3.4
       '@msk/components': link:packages/components
+      '@msk/constants': link:packages/constants
       '@msk/eslint-config': link:internal/eslint-config
       '@msk/theme-chalk': link:packages/theme-chalk
       '@msk/tokens': link:packages/tokens

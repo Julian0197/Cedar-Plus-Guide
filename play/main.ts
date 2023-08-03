@@ -1,10 +1,11 @@
 import { createApp } from 'vue'
 import ElIcon from '@msk/components/icon'
 import ElButton, { ElButtonGroup } from '@msk/components/button'
+import ElInput from '@msk/components/Input'
 import '@msk/theme-chalk/src/index.scss'
 import App from './src/App.vue'
 // 组件库
-const components = [ElIcon, ElButton, ElButtonGroup]
+const components = [ElIcon, ElButton, ElButtonGroup, ElInput]
 // 是否已安装标识
 const INSTALLED_KEY = Symbol('INSTALLED_KEY')
 // 组件库插件

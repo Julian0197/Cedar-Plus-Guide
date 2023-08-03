@@ -13,6 +13,7 @@
     <div style="margin-top: 20px">
       <TestButtonGroup />
     </div>
+    <el-input />
   </div>
 </template>
 <script lang="ts">
@@ -36,6 +37,7 @@ export default defineComponent({
     nextTick(() => {
       console.log('buttonRef222', buttonRef.value.ref)
     })
+
     return {
       handleClick,
       buttonRef,
