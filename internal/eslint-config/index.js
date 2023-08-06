@@ -31,9 +31,17 @@ module.exports = defineConfig({
       parser: 'jsonc-eslint-parser',
     },
     {
-      files: ['*.ts', '*.vue'],
+      files: ['*.ts'],
       rules: {
         'no-undef': 'off',
+      },
+    },
+    {
+      files: ['*.vue'],
+      rules: {
+        'no-undef': 'off',
+        'no-console': 'off',
+        'no-debugger': 'off',
       },
     },
     {

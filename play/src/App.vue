@@ -13,11 +13,12 @@
     <div style="margin-top: 20px">
       <TestButtonGroup />
     </div>
-    <el-input />
+    <!-- test input -->
+    <el-input v-model="state" />
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, nextTick, ref } from 'vue'
+import { defineComponent, nextTick, ref, watch } from 'vue'
 import { Edit } from '@element-plus/icons-vue'
 import EditIcon from './EditIcon.vue'
 import TestButtonGroup from './TestButtonGroup.vue'
@@ -30,6 +31,7 @@ export default defineComponent({
   },
 
   setup() {
+    // test button
     const handleClick = (e: Event) => {
       console.log(e, 'event111')
     }
@@ -38,10 +40,20 @@ export default defineComponent({
       console.log('buttonRef222', buttonRef.value.ref)
     })
 
+    // test input
+    const state = ref('MSK')
+    watch(
+      () => state.value,
+      (newVal) => {
+        console.log('state值：', newVal)
+      }
+    )
+
     return {
       handleClick,
       buttonRef,
       Edit,
+      state,
     }
   },
 })
