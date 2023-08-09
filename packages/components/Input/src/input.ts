@@ -1,4 +1,4 @@
-import { isString } from '@vueuse/core'
+import { isString } from '@vue/shared'
 import { UPDATE_MODEL_EVENT } from '@msk/constants'
 import type { ExtractPropTypes, PropType } from 'vue'
 import type Input from './input.vue'
